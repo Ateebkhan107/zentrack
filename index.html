@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZenTrack - Daily Motivation & Productivity Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-content">
+      <h1 class="logo">ZenTrack</h1>
+      <div class="header-controls">
+        <button id="darkModeToggle" class="dark-mode-toggle">
+          <span class="moon-icon">🌙</span>
+          <span class="sun-icon">☀️</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main container">
+    <!-- Quote Section -->
+    <section class="quote-section">
+      <div id="quoteContainer" class="quote-container fade-in">
+        <p id="quoteText" class="quote-text"></p>
+        <p id="quoteAuthor" class="quote-author"></p>
+      </div>
+      <button id="newQuoteBtn" class="btn">New Quote</button>
+    </section>
+
+    <!-- To-Do Section -->
+    <section class="card fade-in">
+      <h2 class="section-title">📝 To-Do List</h2>
+      <div class="todo-input-container">
+        <input id="todoInput" class="todo-input" type="text" placeholder="What do you want to accomplish?" />
+        <button id="addTodoBtn" class="btn">Add</button>
+      </div>
+      <ul id="todoList" class="todo-list"></ul>
+      <p id="todoStats" class="todo-stats"></p>
+    </section>
+
+    <!-- Journal Section -->
+    <section class="card fade-in">
+      <h2 class="section-title">📓 Daily Journal</h2>
+      <p id="journalDate" class="journal-date"></p>
+      <textarea id="journalText" class="journal-textarea" placeholder="Reflect on your day..."></textarea>
+      <button id="saveJournalBtn" class="btn">Save Entry</button>
+      <div id="journalStatus" class="journal-status"></div>
+    </section>
+
+    <!-- Timer Section -->
+    <section class="card fade-in timer-section">
+      <h2 class="section-title">⏱️ Focus Timer</h2>
+      <div id="timerDisplay" class="timer-display">25:00</div>
+      <p id="timerMode" class="timer-mode">Focus Time</p>
+      <div class="timer-controls">
+        <button id="startTimerBtn" class="btn">Start</button>
+        <button id="pauseTimerBtn" class="btn btn-secondary">Pause</button>
+        <button id="resetTimerBtn" class="btn btn-secondary">Reset</button>
+      </div>
+      <div class="timer-settings">
+        <label>Focus (min)
+          <input id="focusMinutes" type="number" value="25" />
+        </label>
+        <label>Break (min)
+          <input id="breakMinutes" type="number" value="5" />
+        </label>
+      </div>
+      <audio id="timerSound" src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg" preload="auto"></audio>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>✨ Built with mindfulness and love. Stay productive! ✨</p>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
